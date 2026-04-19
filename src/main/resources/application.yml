@@ -1,0 +1,19 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: leaky-service
+
+logging:
+  level:
+    com.example.leakyservice: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,heapdump
+  endpoint:
+    heapdump:
+      enabled: true
